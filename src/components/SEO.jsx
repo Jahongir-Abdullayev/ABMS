@@ -37,10 +37,11 @@ export default function SEO({ title }) {
       <meta name='twitter:description' content='Next js' />
       <meta name='twitter:site' content={title || 'Next js template'} />
       <meta name='twitter:creator' content='Udevs' />
-      <meta
+      {/* <meta
         name='twitter:image'
         content='https://cdn.rasta.app/rasta/aef8208b-c6fc-4db9-878b-51544ab711be'
-      />
+      /> */}
+      
 
       <link rel='icon' href='/favicon.ico' />
       {/* <link

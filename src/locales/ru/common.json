@@ -2,5 +2,10 @@
   "greeting": "Привет, мир",
   "home": "Главная",
   "blog": "Блог",
-  "about": "О нас"
+  "about": "О нас",
+  "goods": "Товары",
+  "contacts":"Контакты",
+  "yourfantasystartshere": "Ваша фантазия начинается отсюда",
+  "catalogs": "Каталогы",
+  "viewMore": "Посмотреть больше"
 }

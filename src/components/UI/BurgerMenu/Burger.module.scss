@@ -1,0 +1,20 @@
+.burgerMenu{
+  display: none;
+}
+
+.menuItems {
+  color: var(--main-color);
+  font-weight: 700;
+  .menuButtons {
+    padding: 5px;
+  }
+}
+
+
+
+
+@media (max-width: 767px){
+  .burgerMenu{
+    display: flex;
+  }
+}

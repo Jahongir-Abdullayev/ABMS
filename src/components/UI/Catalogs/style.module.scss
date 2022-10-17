@@ -1,0 +1,87 @@
+.title{
+  font-size: 32px;
+  margin: 50px 0px 10px 0px;
+}
+.Catalogs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+ 
+  .catalodItem{
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition:  .3s ;
+    .name{
+      padding: 3px 0px;
+      text-align: center;
+    }
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px 0px, rgba(0, 0, 0, 0.22) 0px 15px 12px 0px;
+      transition:  .3s ;
+    }
+    .image{
+      img{
+        object-fit: cover;
+      }
+    }
+  }
+ 
+}
+.button{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  .viewMoreButton{
+    background: orange;
+    padding: 8px 16px;
+    border: none;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: .2s;
+    &:hover{
+      background-image: url("../../../../public/images/products/астана\ пайн.jpg");
+      transition: background-image  .2s;
+      color: black;
+    }
+  }
+}
+
+
+
+.catalogPage{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../../../../public/images/products/астана\ пайн.jpg");
+  
+  .block{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    img{
+      border: 3px solid black;
+    }
+    .productName{
+      font-size: 28px;
+    }
+    .info{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      line-height: 24px;
+      .header{
+        font-weight: 500;
+        font-size: 16px;
+      }
+      .desc{
+        font-weight: 400;
+        color: gray;
+      }
+    }
+  }
+}

@@ -4,8 +4,11 @@ import useTranslation from 'next-translate/useTranslation'
 import { Button } from '@mui/material'
 import { createPost, getPosts } from 'services'
 import { useEffect, useState } from 'react'
-import { Counter } from '../Counter/Counter'
+
 import classNames from 'classnames'
+import backImage from "../../../../public/images/interier.jpeg"
+
+
 export function Main() {
   const { t } = useTranslation('common')
   const [posts, setPosts] = useState([])
@@ -30,6 +33,7 @@ export function Main() {
 
   return (
     <main
+    id="#home"
       className={classNames(styles.main, {
         [styles.active]: active
       })}
@@ -38,9 +42,13 @@ export function Main() {
             https://nextjs.org/docs/api-reference/next/image
         */}
       <div className={styles.banner}>
-        <div className={styles.text}>{t('greeting')}</div>
+        <div className={styles.headerTitle}>
+        <div className={styles.title}>{t('Profix')}</div>
+        <div className={styles.text}> {t('yourfantasystartshere')} </div>
+
+        </div>
         <Image
-          src='/images/airplain.jpg'
+          src={backImage}
           objectFit='cover'
           priority={true}
           alt='airplain'
@@ -48,12 +56,12 @@ export function Main() {
         />
       </div>
 
-      <Counter />
+      {/* <Catalog /> */}
 
       {/* next image domain config
             https://nextjs.org/docs/basic-features/image-optimization#domains
         */}
-      <div className={styles.img}>
+      {/* <div className={styles.img}>
         <Image
           src='https://test.cdn.rasta.app/rasta/9302ea6c-46d9-4a9c-a9e0-5e9aa9631250'
           width={310}
@@ -62,15 +70,15 @@ export function Main() {
           objectFit='cover'
           layout='responsive'
         />
-      </div>
-      <Button size='large' color='primary' onClick={addPost}>
+      </div> */}
+      {/* <Button size='large' color='primary' onClick={addPost}>
         Create post
-      </Button>
-      <div>
+      </Button> */}
+      {/* <div>
         {posts.map((item) => (
           <div key={item.id}>{item.title}</div>
         ))}
-      </div>
+      </div> */}
     </main>
   )
 }

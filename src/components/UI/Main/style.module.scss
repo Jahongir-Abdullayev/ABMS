@@ -6,20 +6,70 @@
     min-height: 50vh;
   }
   .banner {
-    height: rem(400);
+    height: 100vh;
     position: relative;
-    .text {
+    .headerTitle{
+      // border: 3px solid white;
+      padding: 20px;
+      text-align: center;
+      width: 270px;
+      height: 270px;
+      margin: 0 auto;
+      transition: all .4s linear;
       position: absolute;
-      top: rem(300);
-      left: rem(200);
-      font-size: rem(28);
-      font-weight: 600;
-      z-index: 9;
-      color: #fff;
+      top: 28%;
+      left: 42%;
+     
+      z-index: 9999;
+      
+      &:hover{
+        // background: #bdc3c7;  /* fallback for old browsers */
+        // background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+        // background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-color: black;
+        // border: 3px solid white;
+        transition: all .4s linear;
+        opacity: 0.8;
+        
+       .title{
+        color: #607d8b;
+        background-image: -webkit-linear-gradient(0deg, #607d8b 49%, #abb2bf 80%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+       }
+      }
+      .title{
+        text-transform: uppercase;
+        color: black;
+        font-weight: 700;
+        font-size: 64px;
+        margin-top: 48px;
+        transition: all .4s linear;
+      }
+      .text{
+        // text-transform: uppercase;
+        font-size: 20px;
+        color: #ffffff;
+        transition: all .4s linear;
+      }
     }
+  
   }
 
   .img {
     width: 50%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+

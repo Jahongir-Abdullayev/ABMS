@@ -1,18 +1,61 @@
 .footer {
   width: 100%;
-  height: 200px;
+  // height: 200px;
   background-color: #f6f6f6;
   padding: 40px 0;
+  .footerInner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   .box {
     display: flex;
+    align-items: center;
     .logo {
       margin-right: 40px;
+      svg{
+        font-size: 30px;
+      }
     }
     ul {
       list-style: none;
-      row-gap: 20px;
+      gap: 20px;
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
     }
   }
+  .contactNumber{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    div{
+      font-weight: 600;
+    }
+    .addressNAme{
+      font-size: 14px;
+      color: gray;
+    }
+  }
+  }
+
+  .address{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .addressText{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 5px;
+      .title{
+        font-size: 18px;
+        font-weight: 500;
+      }
+      
+    }
+    .map{
+      width: 350px;
+    }
+  
+  }
+
 }

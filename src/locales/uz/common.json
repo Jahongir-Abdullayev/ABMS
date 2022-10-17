@@ -2,5 +2,10 @@
   "greeting": "Salom Dunyo",
   "home": "Asosiy sahifa",
   "blog": "Blog",
-  "about": "Biz haqimizda"
+  "about": "Biz haqimizda",
+  "goods": "Mahsulotlar" ,
+  "contacts":"Kontaktlar",
+  "yourfantasystartshere": "Sizning fantaziyangiz shu yerdan boshlanadi",
+  "catalogs": "Kataloglar",
+  "viewMore": "Ko'proq ko'rsatish"
 }
