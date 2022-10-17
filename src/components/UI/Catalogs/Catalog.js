@@ -65,7 +65,7 @@ export function Catalog() {
         </motion.div>
         <div className={styles.button}>
 
-        <button className={styles.viewMoreButton}> <a href='/catalogs'> {t("viewMore")} </a>  </button>
+        <button className={styles.viewMoreButton}> <Link href='/catalogs'> {t("viewMore")} </Link>  </button>
         </div>
       </Container>
     </div>
