@@ -1,7 +1,7 @@
 export const catalogs = [
   { id: 0, image: "/images/products/Аризона.jpg", name: "Аризона", desc: "" },
   { id: 1, image: "/images/products/Ясень Бородино.jpg", name: "Ясень Бородино", desc: "" },
-  { id: 2, image: "/images/products/астана пайн.jpg", name: "астана пайн", desc: "" },
+  { id: 2, image: "/images/products/back.jpg", name: "астана пайн", desc: "" },
   { id: 3, image: "/images/products/Баунти.jpg", name: "Баунти", desc: "" },
   { id: 4, image: "/images/products/Бахия палисандр и австралия.jpg", name: "Бахия палисандр и австралия", desc: "" },
   { id: 5, image: "/images/products/береза одесса, липа вегас.jpg", name: "береза одесса, липа вегас", desc: "" },
