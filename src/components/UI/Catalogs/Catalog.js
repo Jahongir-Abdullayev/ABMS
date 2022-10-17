@@ -40,7 +40,7 @@ export function Catalog() {
   }
 
   return (
-    <div id='catalog'>
+    <div id="catalog">
       <Container>
         <div className={styles.title}> {t("catalogs")} </div>
         <motion.div
@@ -52,21 +52,25 @@ export function Catalog() {
         >
           {catalogs?.slice(0, 8).map((item) => (
             <Link href={`/catalog/${item.id}`} key={item.id} passHref>
-            <motion.div
-              variants={variantItem}
-              key={item.id}
-              className={styles.catalodItem}
-            >
-              <ImageCatalog img={item.image} />
-              <div className={styles.name}> {item.name} </div>
-            </motion.div>
+              <motion.div
+                variants={variantItem}
+                key={item.id}
+                className={styles.catalodItem}
+              >
+                <ImageCatalog img={item.image} />
+                <div className={styles.name}> {item.name} </div>
+              </motion.div>
             </Link>
           ))}
         </motion.div>
+          <Link href="/catalogs" passHref>
         <div className={styles.button}>
-
-        <button className={styles.viewMoreButton}> <Link href='/catalogs'> {t("viewMore")} </Link>  </button>
+         
+            <button className={styles.viewMoreButton}>
+              {t("viewMore")}
+            </button>
         </div>
+          </Link>
       </Container>
     </div>
   );
