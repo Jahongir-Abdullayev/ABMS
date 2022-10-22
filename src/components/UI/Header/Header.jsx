@@ -38,14 +38,14 @@ export function Header() {
       href: "/#home",
     },
     {
-      id: 2,
-      name: t("about"),
-      href: "/#about",
-    },
-    {
       id: 3,
       name: t("catalogs"),
       href: "/#catalog",
+    },
+    {
+      id: 2,
+      name: t("about"),
+      href: "/#about",
     },
     {
       id: 4,
@@ -75,9 +75,9 @@ export function Header() {
   return (
     <div
       style={{ background: "#F1EFEF" }}
-      className={`${
-        cls.main_container 
-      } ${router.route.substring(0, 6) === "/news/" && cls.news_active}`}
+      className={`${cls.main_container} ${
+        router.route.substring(0, 6) === "/news/" && cls.news_active
+      }`}
     >
       <Container className={cls.mobile_container}>
         <Box className={cls.header_menu}>
@@ -95,10 +95,21 @@ export function Header() {
             </Link>
           </div>
           <div className={cls.headerMenu_items}>
-            <a  onClick={() => router.push("/#home")}> <div className="hoverable_btn">{t("home")}</div> </a>
-            <a onClick={() => router.push("#about")}> <div className="hoverable_btn">{t("about")}</div> </a>
-            <a onClick={() => router.push("#catalog")}><div className="hoverable_btn">{t("catalogs")}</div> </a>
-            <a onClick={() => router.push("#contact")}> <div className="hoverable_btn">{t("contacts")}</div> </a>
+            <a onClick={() => router.push("/#home")}>
+              {" "}
+              <div className="hoverable_btn">{t("home")}</div>{" "}
+            </a>
+            <a onClick={() => router.push("#catalog")}>
+              <div className="hoverable_btn">{t("catalogs")}</div>
+            </a>
+            <a onClick={() => router.push("/#about")}>
+              {" "}
+              <div className="hoverable_btn">{t("about")}</div>{" "}
+            </a>
+            <a onClick={() => router.push("#contact")}>
+              {" "}
+              <div className="hoverable_btn">{t("contacts")}</div>{" "}
+            </a>
           </div>
 
           <div className={cls.contact_lang_btns}>
@@ -134,20 +145,19 @@ export function Header() {
                   }}
                 >
                   {langs?.map((item, index) => (
-                    
                     <MenuItem key={index} value={index}>
-                      <Link href={`${router.asPath}`} locale={item.key} passHref>
-                      
+                      <Link
+                        href={`${router.asPath}`}
+                        locale={item.key}
+                        passHref
+                      >
                         {item.key}
-                    
                       </Link>
                     </MenuItem>
                   ))}
-                  
                 </Select>
               </FormControl>
             </div>
-          
           </div>
           <BurgerMenu data={burgerData} className={cls.burger} />
         </Box>

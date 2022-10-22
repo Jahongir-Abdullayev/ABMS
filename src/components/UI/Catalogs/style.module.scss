@@ -1,24 +1,99 @@
 .title{
   font-size: 32px;
-  margin: 50px 0px 10px 0px;
+  margin: 80px 0px 10px 0px;
 }
 .Catalogs{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
  
   .catalodItem{
     margin-bottom: 15px;
     cursor: pointer;
     transition:  .3s ;
+    position: relative;
+    &:hover{
+      background: #9e5406;
+    }
+&:hover .name{
+  opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+    &:hover .textBlock::before{
+      opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+    }
+    &:hover .textBlock::after{
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    img{
+      // opacity: 0.7;
+	    -webkit-transition: opacity 0.35s;
+	    transition: opacity 0.35s;
+    }
+    
     .name{
-      padding: 3px 0px;
+      // padding: 20px 2.5em;
+      width: 150px;
+      margin: 0 auto;
+      font-size: 22px;
+      font-family: 'Roboto-Bold';
+      color: #fff;
+	opacity: 0;
+  padding-top: 80px;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0, 20px, 0);
+	transform: translate3d(0, 20px, 0);
       text-align: center;
     }
-    &:hover{
-      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px 0px, rgba(0, 0, 0, 0.22) 0px 15px 12px 0px;
-      transition:  .3s ;
+    &:hover img{
+      opacity: 0.4;
+      // box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px 0px, rgba(0, 0, 0, 0.22) 0px 15px 12px 0px;
+      // transition:  .3s ;
+    }
+    .textBlock{
+      position: absolute;
+      
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+      &::before{
+        position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+  border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0, 1);
+	transform: scale(0, 1);
+      }
+      &::after{
+        position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+  border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1, 0);
+	transform: scale(1, 0);
+      }
     }
     .image{
       img{
@@ -42,11 +117,32 @@
     cursor: pointer;
     font-size: 18px;
     transition: .2s;
-    &:hover{
-      background-image: url("../../../../public/images/back.jpg");
-      transition: background-image  .2s;
-      color: black;
-    }
+  }
+  .innerDiv{
+    position: absolute;
+    display: block;
+    width: 0%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background: #FFD583;
+    z-index: 1;
+    overflow: hidden;
+    transition: .8s all ease;
+  }
+  &:hover .innerDiv{
+    width: 100%;
+  }
+  .span{
+    position: absolute;
+    color: #6087B8;
+    width: 123px;
+    top: 0;
+    left: 0;
+    display: block;
+    text-align: center;
+    height: 100%;
+    padding: 10px 0;
   }
 }
 
@@ -82,6 +178,69 @@
         font-weight: 400;
         color: gray;
       }
+    }
+  }
+}
+
+
+.seeMoreButton {
+  display: inline-block;
+  padding: 10px 20px;
+  // border-radius: 10rem;
+  color: #fff;
+  // text-transform: uppercase;
+  font-size: 1rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFD583;
+    // border-radius: 10rem;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken(#FFD583, 15%);
+    transition: all .3s;
+    // border-radius: 10rem;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+
+.CatalogsList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  .catalodItem{
+    margin-bottom: 10px;
+    transition:  .3s ;
+    .name{
+      text-align: center;
+      padding: 8px 0;
+    }
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px 0px, rgba(0, 0, 0, 0.22) 0px 15px 12px 0px;
+      transition:  .3s 
     }
   }
 }

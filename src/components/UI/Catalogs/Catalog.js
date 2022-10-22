@@ -58,20 +58,22 @@ export function Catalog() {
                 className={styles.catalodItem}
               >
                 <ImageCatalog img={item.image} />
-                <div className={styles.name}> {item.name} </div>
+                <div className={styles.textBlock}>
+                  <div className={styles.name}> {item.name} </div>
+                </div>
               </motion.div>
             </Link>
           ))}
         </motion.div>
-          <Link href="/catalogs" passHref>
-        <div className={styles.button}>
-         
-            <button className={styles.viewMoreButton}>
-              {t("viewMore")}
-            </button>
-        </div>
-          </Link>
+        <Link href="/catalogs" passHref>
+          <div className={styles.button}>
+            <div className={styles.seeMoreButton}>
+              <a href="#">{t("viewMore")}</a> <div></div>
+            </div>
+          </div>
+        </Link>
       </Container>
+    
     </div>
   );
 }

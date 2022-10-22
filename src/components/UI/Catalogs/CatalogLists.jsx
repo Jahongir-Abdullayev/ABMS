@@ -16,12 +16,12 @@ const CatalogLists = () => {
           {" "}
           {t("catalogs")}{" "}
         </div>
-        <div className={styles.Catalogs}>
+        <div className={styles.CatalogsList}>
           {catalogs?.map((item) => (
             <Link href={`/catalog/${item.id}`} key={item.id} passHref>
               <div key={item.id} className={styles.catalodItem}>
                 <ImageCatalog img={item.image} />
-                <div> {item.name} </div>
+                <div className={styles.name}> {item.name} </div>
               </div>
             </Link>
           ))}

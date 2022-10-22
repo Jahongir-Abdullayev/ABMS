@@ -1,0 +1,37 @@
+
+
+
+.title{
+    font-size: 32px;
+    font-family: 'Roboto-Bold';
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+
+.benefits{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    .benefitCard{
+        background: #FFD583;
+        max-width: 250px;
+        padding: 20px;
+        text-align: center;
+        height: 200px;
+        .cardHeader{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            gap: 5px;
+            .cardTitle{
+                text-transform: uppercase;
+                font-family: 'Roboto-Bold';
+                font-size: 18px;
+            }
+        }
+    }
+}
