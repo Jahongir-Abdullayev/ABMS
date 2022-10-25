@@ -82,9 +82,6 @@ export function OurBenefits(){
           <div className={styles.ourBenefits}>
             <div className={styles.title}> {t("ourBenefits")} </div>
             <motion.div
-            //   variants={container}
-            //   initial="hidden"
-            //   animate={controls}
               className={styles.benefits}
               ref={ref}
             >
