@@ -5,11 +5,12 @@
 .Catalogs{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   // margin-bottom: 75px;
+  gap: 16px;
  
   .catalodItem{
-    margin-bottom: 15px;
+    
     cursor: pointer;
     transition:  .3s ;
     position: relative;

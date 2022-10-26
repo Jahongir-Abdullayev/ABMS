@@ -45,7 +45,7 @@ export function Catalog() {
   return (
     <div id="catalog">
       <Container>
-        <div className={styles.title}> {t("catalogs")} </div>
+        <div className={styles.title} style={{marginLeft: '51px'}}> {t("catalogs")} </div>
         <motion.div
           className={styles.Catalogs}
           ref={ref}

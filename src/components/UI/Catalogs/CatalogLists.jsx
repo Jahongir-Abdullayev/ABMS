@@ -43,7 +43,7 @@ const CatalogLists = () => {
           ))}
         </div>
         <div className={styles.pagination}>
-          <div onClick={() => setPage( page !== 1 ? page-1 : 1)}>
+          <div onClick={() => setPage(page !== 1 ? page - 1 : 1)}>
             <ArrowBackIosNew />
           </div>
           {pages?.map((num) => (
@@ -59,7 +59,11 @@ const CatalogLists = () => {
               {num}
             </div>
           ))}
-          <div onClick={() => setPage( pages?.length === page ? pages?.length : page + 1)}>
+          <div
+            onClick={() =>
+              setPage(pages?.length === page ? pages?.length : page + 1)
+            }
+          >
             <ArrowForwardIos />
           </div>
         </div>

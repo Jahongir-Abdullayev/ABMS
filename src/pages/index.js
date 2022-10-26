@@ -6,7 +6,7 @@ import AboutUs from './about'
 import { OurBenefits } from 'components/UI/OurBenefits/Benefits'
 
 export default function Home({ data }) {
-  console.log('prr=>', process.env.NEXT_PUBLIC_TEST)
+  
   return (
     <>
       <SEO />
