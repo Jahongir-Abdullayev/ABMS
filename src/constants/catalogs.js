@@ -7,7 +7,7 @@ export const catalogs = [
   { id: 5, image: "/images/products/береза одесса, липа вегас.jpg", name: "береза одесса, липа вегас", desc: "" },
   { id: 6, image: "/images/products/Бонито (мрамор).jpg", name: "Бонито (мрамор)", desc: "" },
   { id: 7, image: "/images/products/Белая линия.jpg", name: "Белая линия", desc: "" },
-  { id: 8, image: "images/products/Белый лес.jpg", name: "Белый лес", desc: "" },
+  { id: 8, image: "images/products/whiteForest.jpg", name: "Белый лес", desc: "" },
   { id: 9, image: "/images/products/береза одесса, липа вегас.jpg", name: "береза одесса, липа вегас", desc: "" },
   { id: 10, image: "/images/products/Бук Бавария.jpg", name: "Бук Бавария", desc: "" },
   { id: 11, image: "/images/products/Венге.jpg", name: "Венге", desc: "" },
