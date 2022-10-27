@@ -45,7 +45,10 @@ export function Catalog() {
   return (
     <div id="catalog">
       <Container>
-        <div className={styles.title} style={{marginLeft: '51px'}}> {t("catalogs")} </div>
+        <div className={styles.title} style={{ marginLeft: "51px" }}>
+          {" "}
+          {t("catalogs")}{" "}
+        </div>
         <motion.div
           className={styles.Catalogs}
           ref={ref}
@@ -75,7 +78,14 @@ export function Catalog() {
         <Collapse in={showOthers}>
           <div className={styles.Catalogs}>
             {catalogs?.slice(8, 16).map((item) => (
-              <div key={item.id} className={styles.catalodItem}>
+              <div
+                key={item.id}
+                className={styles.catalodItem}
+                onClick={() => {
+                  setOpen(true);
+                  setId(item.id);
+                }}
+              >
                 <ImageCatalog img={item.image} />
                 <div className={styles.textBlock}>
                   <div className={styles.name}> {item.name} </div>
@@ -103,7 +113,7 @@ export function Catalog() {
               onClick={() => setShowOthers(true)}
             >
               {/* <a href="#">{t("viewMore")}</a> <div></div> */}
-             
+
               {t("viewMore")}
             </div>
           </div>
