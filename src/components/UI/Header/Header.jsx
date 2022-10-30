@@ -90,8 +90,10 @@ export function Header() {
               height="70px"
               alt="logo"
             /> */}
-
-              <WeekendIcon />
+              <div className={cls.logoName}>
+                <div>Lumber</div>
+                <div>Land</div>
+              </div>
             </Link>
           </div>
           <div className={cls.headerMenu_items}>
@@ -114,7 +116,7 @@ export function Header() {
 
           <div className={cls.contact_lang_btns}>
             <div className={cls.contact}>
-              <a href="tel:+998999999999">71 100-1001</a>
+              <a href="tel:+998999999999">+998 71 205 00 35</a>
             </div>
             <div className={cls.select_language}>
               <FormControl style={{ height: "100%" }}>

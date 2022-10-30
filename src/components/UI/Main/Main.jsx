@@ -43,7 +43,7 @@ export function Main() {
         */}
       <div className={styles.banner}>
         <div className={styles.headerTitle}>
-        <div className={styles.title}>{t('Profix')}</div>
+        <div className={styles.title}>{t('Lumber Land')}</div>
         <div className={styles.text}> {t('yourfantasystartshere')} </div>
 
         </div>

@@ -44,10 +44,10 @@ export function Catalog() {
 
   return (
     <div id="catalog">
+      <div style={{marginTop: '30px', opacity: '0', color: 'white'}} >123</div>
       <Container>
         <div className={styles.title} style={{ marginLeft: "51px" }}>
-          {" "}
-          {t("catalogs")}{" "}
+          {t("catalogs")}
         </div>
         <motion.div
           className={styles.Catalogs}
@@ -76,7 +76,7 @@ export function Catalog() {
           ))}
         </motion.div>
         <Collapse in={showOthers}>
-          <div className={styles.Catalogs}>
+          <div className={styles.Catalogs} style={{marginTop: '16px'}}>
             {catalogs?.slice(8, 16).map((item) => (
               <div
                 key={item.id}
@@ -113,7 +113,6 @@ export function Catalog() {
               onClick={() => setShowOthers(true)}
             >
               {/* <a href="#">{t("viewMore")}</a> <div></div> */}
-
               {t("viewMore")}
             </div>
           </div>
@@ -130,8 +129,8 @@ export function Catalog() {
           <div className={styles.ProductInfo}>
             <div className={styles.img}>
               <ImageCatalog
-                width="200px"
-                height="200px"
+                width="400px"
+                height="400px"
                 img={catalogs[id]?.image}
               />
             </div>
@@ -167,6 +166,7 @@ export function Catalog() {
               </div>
             </div>
           </div>
+          <div className={styles.closeButton} onClick={() => setOpen(false)}> x</div>
         </div>
       </Modal>
     </div>

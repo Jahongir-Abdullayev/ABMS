@@ -147,8 +147,6 @@
   }
 }
 
-
-
 .catalogPage{
   padding-top: 100px;
   padding-bottom: 100px;
@@ -252,17 +250,26 @@
 .popUpBlock{
   position: absolute;
   top: 50%;
-  // width: 500px;
+  width: 800px;
   background: #fff;
   margin: 0 auto;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 99999;
   padding: 50px;
+  .closeButton{
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    font-size: 22px;
+    color: gray;
+    cursor: pointer;
+  }
   .ProductInfo{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
+    justify-content: center;
   }
   .text{
     .productName{

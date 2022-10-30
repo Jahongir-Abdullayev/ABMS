@@ -12,6 +12,13 @@
     align-items: center;
     .logo {
       margin-right: 40px;
+      .logoName{
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 22px;
+        cursor: pointer;
+      }
       svg{
         font-size: 30px;
       }
@@ -44,7 +51,7 @@
     .addressText{
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 15px;
       margin-bottom: 5px;
       .title{
         font-size: 18px;

@@ -1,9 +1,7 @@
-import styles from './style.module.scss'
-import Link from 'next/link'
-import { Container } from '@mui/material'
-import WeekendIcon from '@mui/icons-material/Weekend';
+import { Container } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
-import { style } from '@mui/system';
+import Link from 'next/link';
+import styles from './style.module.scss';
 
 
 export function Footer() {
@@ -15,7 +13,10 @@ export function Footer() {
           <div className={styles.box}>
             <Link href="/">
               <a className={styles.logo}>
-                <WeekendIcon />
+              <div className={styles.logoName}>
+                <div>Lumber</div>
+                <div>Land</div>
+              </div>
               </a>
             </Link>
             <nav>
@@ -26,17 +27,17 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog">
+                  <Link href="/#about">
                     <a>{t("about")}</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about">
+                  <Link href="#catalog">
                     <a>{t("catalogs")}</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about">
+                  <Link href="#contact">
                     <a>{t("contacts")}</a>
                   </Link>
                 </li>
@@ -45,12 +46,13 @@ export function Footer() {
           </div>
           <div className={styles.contactNumber}>
             <div>Адрес: </div>
-            <div className={styles.addressNAme}>{`Toshkent shahar, Chilonzor, Gavxar ko'chasi, 1-uy`}</div>
+            <div className={styles.addressNAme}>{`Toshkent shahar, Yashnobod tumani, Uysozlar ko'chasi, 3`}</div>
           </div>
         </div>
         <div className={styles.address}>
           <div className={styles.addressText}>
-            <div className={styles.title}>+99890 777-70-07</div>
+            <div className={styles.title}>+998 71 205 00 35</div>
+            <div className={styles.title}>+998 71 205 02 64</div>
             
           </div>
           <div className={styles.map}>
