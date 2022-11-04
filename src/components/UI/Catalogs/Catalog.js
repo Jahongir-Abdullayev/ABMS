@@ -44,7 +44,7 @@ export function Catalog() {
 
   return (
     <div id="catalog">
-      <div style={{marginTop: '30px', opacity: '0', color: 'white'}} >123</div>
+      <div style={{ marginTop: "30px", opacity: "0", color: "white" }}>123</div>
       <Container>
         <div className={styles.title} style={{ marginLeft: "51px" }}>
           {t("catalogs")}
@@ -76,7 +76,7 @@ export function Catalog() {
           ))}
         </motion.div>
         <Collapse in={showOthers}>
-          <div className={styles.Catalogs} style={{marginTop: '16px'}}>
+          <div className={styles.Catalogs} style={{ marginTop: "16px" }}>
             {catalogs?.slice(8, 16).map((item) => (
               <div
                 key={item.id}
@@ -102,7 +102,7 @@ export function Catalog() {
                 onClick={() => setShowOthers(true)}
               >
                 {/* <a href="#">{t("viewMore")}</a> <div></div> */}
-                {t("Посмотреть все каталоги")}
+                {t("viewAllCatalogs")}
               </div>
             </div>
           </Link>
@@ -127,46 +127,21 @@ export function Catalog() {
       >
         <div className={styles.popUpBlock}>
           <div className={styles.ProductInfo}>
+            <div className={styles.text}>
+              <div className={styles.productName}>{catalogs[id]?.name}</div>
+            </div>
             <div className={styles.img}>
               <ImageCatalog
-                width="400px"
-                height="400px"
+                width="600px"
+                height="600px"
                 img={catalogs[id]?.image}
               />
             </div>
-            <div className={styles.text}>
-              <div className={styles.productName}>{catalogs[id]?.name}</div>
-              <div className={styles.info}>
-                <div className={styles.header}>Код товара:</div>
-                <div className={styles.desc}>82477Артикул: Vega Bavariya</div>
-              </div>
-              <div className={styles.info}>
-                <div className={styles.header}>Цвет каркаса: </div>
-                <div className={styles.desc}>Орех</div>
-              </div>
-              <div className={styles.info}>
-                <div className={styles.header}>Материал каркаса:</div>
-                <div className={styles.desc}>ДСП</div>
-              </div>
-              <div className={styles.info}>
-                <div className={styles.header}>Страна производитель:</div>
-                <div className={styles.desc}>Россия</div>
-              </div>
-              <div className={styles.info}>
-                <div className={styles.header}>Материал каркаса:</div>
-                <div className={styles.desc}>ДСП</div>
-              </div>
-              <div className={styles.info}>
-                <div className={styles.header}>Цвет каркаса: </div>
-                <div className={styles.desc}>Орех</div>
-              </div>
-              <div className={styles.info}>
-                <div className={styles.header}>Страна производитель:</div>
-                <div className={styles.desc}>Россия</div>
-              </div>
-            </div>
           </div>
-          <div className={styles.closeButton} onClick={() => setOpen(false)}> x</div>
+          <div className={styles.closeButton} onClick={() => setOpen(false)}>
+            {" "}
+            x
+          </div>
         </div>
       </Modal>
     </div>

@@ -15,6 +15,7 @@ import cls from "./Burger.module.scss";
 import WeekendIcon from '@mui/icons-material/Weekend';
 import BackburgerIcon from "@icons/material/BackburgerIcon";
 import MenuIcon from "@icons/material/MenuIcon";
+import logo from '../../../../public/images/black-logo1.png'
 
 
 export default function BurgerMenu({ data, className }) {
@@ -46,8 +47,8 @@ export default function BurgerMenu({ data, className }) {
       <List sx={{ padding: "4px 8px" }}>
         <ListItem className={cls.menuItems}>
           <Link href={"/"} className={cls.menuButtons} passHref>
-            {/* <Image alt="soliq logo" src={logo} style={{ cursor: "pointer" }} /> */}
-            <WeekendIcon />
+            <Image alt="soliq logo" src={logo} style={{ cursor: "pointer" }} />
+          
           </Link>
         </ListItem>
 

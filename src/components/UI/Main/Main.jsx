@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react'
 
 import classNames from 'classnames'
 import backImage from "../../../../public/images/interier.jpeg"
+import blackLogo from "../../../../public/images/black-logo1.png"
+import whiteLogo from "../../../../public/images/white-logo1.png"
 
 
 export function Main() {
@@ -33,26 +35,25 @@ export function Main() {
 
   return (
     <main
-    id="#home"
+      id="#home"
       className={classNames(styles.main, {
-        [styles.active]: active
+        [styles.active]: active,
       })}
     >
-      {/* next image
-            https://nextjs.org/docs/api-reference/next/image
-        */}
       <div className={styles.banner}>
         <div className={styles.headerTitle}>
-        <div className={styles.title}>{t('Lumber Land')}</div>
-        <div className={styles.text}> {t('yourfantasystartshere')} </div>
-
+          <div className={styles.title}>
+            
+            <Image src={blackLogo} alt="logo" />
+          </div>
+          <div className={styles.text}> {t("yourfantasystartshere")} </div>
         </div>
         <Image
           src={backImage}
-          objectFit='cover'
+          objectFit="cover"
           priority={true}
-          alt='airplain'
-          layout='fill'
+          alt="airplain"
+          layout="fill"
         />
       </div>
 
@@ -80,5 +81,5 @@ export function Main() {
         ))}
       </div> */}
     </main>
-  )
+  );
 }

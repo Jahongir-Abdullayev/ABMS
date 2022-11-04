@@ -17,10 +17,11 @@
       margin: 0 auto;
       transition: all .4s linear;
       position: absolute;
-      top: 28%;
-      left: 42%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
      
-      z-index: 9999;
+      z-index: 100;
       
       &:hover{
         // background: #bdc3c7;  /* fallback for old browsers */
@@ -32,7 +33,17 @@
         opacity: 0.8;
         
        .title{
-        color: #607d8b;
+         filter: invert(100%);
+        // color: #607d8b;
+        // background-image: -webkit-linear-gradient(0deg, #607d8b 49%, #abb2bf 80%);
+        // background-clip: text;
+        // -webkit-background-clip: text;
+        // text-fill-color: transparent;
+        // -webkit-text-fill-color: transparent;
+        
+       }
+       .text{
+         color: #607d8b;
         background-image: -webkit-linear-gradient(0deg, #607d8b 49%, #abb2bf 80%);
         background-clip: text;
         -webkit-background-clip: text;

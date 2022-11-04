@@ -250,13 +250,26 @@
   }
 }
 
-@media (max-width: 950px) {
+@media(max-width : 850px){
+  .main_container{
+    .header_menu{
+      .contact_lang_btns{
+        .contact{
+
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
   .main_container {
     .mobile_container {
       background: #fff;
       height: 64px;
-      z-index: 100;
-      position: fixed;
+      z-index: 1000;
+      // position: fixed;
       box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
     }
     @media (max-width: 767px) {
@@ -272,6 +285,9 @@
       .contact_lang_btns {
         .contact {
           color: var(--main-color);
+        }
+        .select_language{
+          display: none;
         }
       }
     }
@@ -294,13 +310,12 @@
   }
 }
 
+
+
 @media (max-width: 500px) {
   .main_container {
     .header_menu {
-      .logo {
-        width: 48px;
-        height: 48px;
-      }
+      
       .contact_lang_btns {
         .contact {
           display: none;

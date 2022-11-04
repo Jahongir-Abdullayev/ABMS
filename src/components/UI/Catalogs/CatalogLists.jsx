@@ -1,5 +1,5 @@
 import { ArrowBackIosNew, ArrowForwardIos, Preview } from "@mui/icons-material";
-import { Container } from "@mui/material"
+import { Container, Modal } from "@mui/material"
 import { catalogs } from "constants/catalogs";
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
@@ -7,12 +7,12 @@ import { useState } from "react";
 import ImageCatalog from "./ImageCatalog"
 import styles from './style.module.scss';
 
-
-
 const CatalogLists = () => {
 
   const [page, setPage] = useState(1);
   const [pageCount, setPageCount] = useState(1);
+  const [open, setOpen] = useState(false)
+  const [id, setId] = useState()
   let pages = [];
 
   let arr = catalogs.filter(
@@ -32,14 +32,21 @@ const CatalogLists = () => {
           {" "}
           {t("catalogs")}{" "}
         </div>
-        <div className={styles.CatalogsList}>
+        <div className={styles.Catalogs}>
           {arr?.map((item) => (
-            <Link href={`/catalog/${item.id}`} key={item.id} passHref>
-              <div key={item.id} className={styles.catalodItem}>
-                <ImageCatalog img={item.image} />
+            <div
+              onClick={() => {
+                setOpen(true);
+                setId(item.id);
+              }}
+              key={item.id}
+              className={styles.catalodItem}
+            >
+              <ImageCatalog img={item.image} />
+              <div className={styles.textBlock}>
                 <div className={styles.name}> {item.name} </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
         <div className={styles.pagination}>
@@ -68,6 +75,30 @@ const CatalogLists = () => {
           </div>
         </div>
       </Container>
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <div className={styles.popUpBlock}>
+          <div className={styles.ProductInfo}>
+            <div className={styles.text}>
+              <div className={styles.productName}>{catalogs[id]?.name}</div>
+            </div>
+            <div className={styles.img}>
+              <ImageCatalog
+                width="600px"
+                height="600px"
+                img={catalogs[id]?.image}
+              />
+            </div>
+          </div>
+          <div className={styles.closeButton} onClick={() => setOpen(false)}>
+            x
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };

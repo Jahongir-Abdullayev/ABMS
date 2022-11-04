@@ -250,7 +250,7 @@
 .popUpBlock{
   position: absolute;
   top: 50%;
-  width: 800px;
+  // width: 800px;
   background: #fff;
   margin: 0 auto;
   left: 50%;
@@ -266,14 +266,15 @@
     cursor: pointer;
   }
   .ProductInfo{
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // gap: 50px;
+    // justify-content: center;
+    text-align: center;
   }
   .text{
     .productName{
-      font-size: 28px;
+      font-size: 32px;
       margin-bottom: 10px;
     }
     .info{
@@ -301,6 +302,7 @@
   justify-content: end;
   margin-bottom: 30px;
   gap: 10px;
+  margin-top: 20px;
   div{
     svg{
       font-size: 16px;
@@ -319,5 +321,23 @@
     align-items: center;
     cursor: pointer;
     font-size: 14px;
+  }
+}
+
+
+
+@media(max-width: 750px){
+  .popUpBlock{
+    .img{
+      img{
+        width: 300px;
+        height: 300px;
+      }
+    }
+    .text{
+      .productName{
+        font-size: 24px;
+      }
+    }
   }
 }

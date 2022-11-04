@@ -2,11 +2,13 @@ import { KeyboardArrowDown } from '@mui/icons-material'
 import WeekendIcon from '@mui/icons-material/Weekend'
 import { Box, Container, FormControl, MenuItem, Select } from '@mui/material'
 import useTranslation from 'next-translate/useTranslation'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import BurgerMenu from '../BurgerMenu'
 import cls from './style.module.scss'
+import logo from '../../../../public/images/black-logo1.png'
 
 export function Header() {
   const router = useRouter()
@@ -91,8 +93,7 @@ export function Header() {
               alt="logo"
             /> */}
               <div className={cls.logoName}>
-                <div>Lumber</div>
-                <div>Land</div>
+               <Image src={logo} alt='logo' width={100} height={50} />
               </div>
             </Link>
           </div>

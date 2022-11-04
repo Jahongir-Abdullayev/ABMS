@@ -2,7 +2,7 @@ import { Container } from '@mui/material'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image';
 import styles from './style.module.scss'
-import img from "../../../../public/images/aboutUs.gif"
+import img from "../../../../public/images/about_us.jpg"
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
@@ -69,16 +69,7 @@ export function About() {
               }}
               className={` ${styles.text} `}
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+            Наша компания была основана в 2019 году при партнерстве с ведущими европейскими компаниями, проявившая себя благодаря своему качеству. Он уже стал одним из ведущих производителей ЛДСП и МДФ в Узбекистане. Производство МДФ схоже с технологией производства ДСП и ДВП, хотя по своей прочности этот материал превышает прочность древесно-стружечных плит почти в 2 раза. Также МДФ является экологически чистым материалом, не причиняющим вреда здоровью человека. Чтобы понять, как удалось достичь таких замечательных показателей позвоните нам, мы будем рады поделиться своим опытом!
             </motion.div>
             <motion.div
               variants={image}
@@ -91,7 +82,7 @@ export function About() {
               ref={ref}
               className={` ${styles.image}`}
             >
-              <Image src={img} alt="img" width={300} height={300} />
+              <Image src={img} alt="img" width={400} height={300} />
             </motion.div>
           </div>
         </div>
