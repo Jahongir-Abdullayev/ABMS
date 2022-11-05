@@ -9,5 +9,14 @@
   "catalogs": "Kataloglar",
   "viewMore": "Ko'proq ko'rsatish",
   "ourBenefits" : "Bizning afzal tomonlarimiz",
-  "viewAllCatalogs":"Barcha kataloglarni ko'rish"
+  "viewAllCatalogs":"Barcha kataloglarni ko'rish",
+  "aboutUsText":"Kompaniyamiz 2019-yilda Yevropaning yetakchi kompaniyalari bilan hamkorlikda tashkil etilgan bo‘lib, u o‘zining sifati bilan o‘zini isbotlagan. U allaqachon O‘zbekistonda DSP va MDF ishlab chiqaruvchilarning yetakchi kompaniyalaridan biriga aylangan. MDF ishlab chiqarish texnologiyasiga o‘xshash. DSP va DSP ishlab chiqarish, garchi bu material DSP mustahkamligidan deyarli 2 baravar ko'p bo'lsa-da.Shuningdek, MDF inson salomatligiga zarar keltirmaydigan ekologik toza materialdir.Bunday ajoyib ko'rsatkichlarga qanday erishilganligini tushunish uchun bizga qo'ng'iroq qiling, biz tajribamizni baham ko'rishdan xursandmiz!",
+  "benefitText1":"Biz sotiladigan tovarlarni to'g'ri baholaymiz va darhol yetib borishini ta'minlaymiz",
+  "benefitText2":"Agar ikkala tomon ham narxdan mamnun bo'lsa, biz tovarni kelishilgan kunda tahlil qilish va eksport qilishni darhol kafolatlaymiz.",
+  "benefitText3":"Bir qarashda ishimizning sifatini baholashingiz mumkin",
+  "benefitText4": "Eng qisqa vaqt ichida eskisidan xalos bo'lish imkoniyati va yangisini olish umidi mavjud.",
+  "benefitTitle1": "Ishonchli",
+  "benefitTitle2": "Darhol",
+  "benefitTitle3": "Sifatli",
+  "benefitTitle4": "Yutuqli"
 }

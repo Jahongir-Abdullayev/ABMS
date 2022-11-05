@@ -50,27 +50,27 @@ export function OurBenefits(){
     const data = [
       {
         id: 1,
-        title: "НАДЁЖНО",
+        title: "benefitTitle1",
         icon:  <DoneOutline />,
-        text: "Достойно оцениваем товары, подлежащие к продаже, и обеспечиваем моментальное прибытие",
+        text: "benefitText1",
       },
       {
         id: 2,
-        title: "МГНОВЕННО",
+        title: "benefitTitle2",
         icon:  <ElectricBolt />,
-        text: "При удовлетворении обеих сторон по цене, гарантируем безотлагательное выполнение разбора и вывоза товара в договоренный же день",
+        text: "benefitText2",
       },
       {
         id: 3,
-        title: "КАЧЕСТВЕННО",
+        title: "benefitTitle3",
         icon: <Handshake />,
-        text: "Вы можете оценить качество наших работ с первого взгляда",
+        text: "benefitText3",
       },
       {
         id: 4,
-        title: "ВЫИГРЫШНО",
+        title: "benefitTitle4",
         icon: <AccessTime />,
-        text: "Есть шанс за кратчайший срок избавиться от старого и надежда на приобретение нового",
+        text: "benefitText4",
       },
     ];
 
@@ -94,10 +94,10 @@ export function OurBenefits(){
                   ref={ref}
                 >
                   <div className={styles.cardHeader}>
-                    <div className={styles.cardTitle}> {item.title} </div>
+                    <div className={styles.cardTitle}> {t(`${item.title}`)} </div>
                     {item.icon}
                   </div>
-                  <div> {item.text} </div>
+                  <div> {t(`${item.text}`)} </div>
                 </motion.div>
               ))}
             </motion.div>
