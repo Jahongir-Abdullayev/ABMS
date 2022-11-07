@@ -17,7 +17,7 @@
       margin: 0 auto;
       transition: all .4s linear;
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
      
@@ -58,6 +58,9 @@
         font-size: 45px;
         margin-top: 48px;
         transition: all .4s linear;
+        img{
+         filter: brightness(0.5);
+        }
       }
       .text{
         // text-transform: uppercase;

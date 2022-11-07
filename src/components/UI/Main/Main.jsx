@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 import classNames from 'classnames'
 import backImage from "../../../../public/images/interier.jpeg"
-import blackLogo from "../../../../public/images/black-logo1.png"
+import blackLogo from "../../../../public/images/logo.svg"
 import whiteLogo from "../../../../public/images/white-logo1.png"
 
 
@@ -54,6 +54,7 @@ export function Main() {
           priority={true}
           alt="airplain"
           layout="fill"
+         
         />
       </div>
 
