@@ -4,6 +4,7 @@ import { fetchMultipleUrls } from 'services/fetchMultipleUrls'
 import { Catalog } from 'components/UI/Catalogs/Catalog'
 import AboutUs from './about'
 import { OurBenefits } from 'components/UI/OurBenefits/Benefits'
+import { Network } from 'components/UI/Network/Network'
 
 export default function Home({ data }) {
   
@@ -11,9 +12,10 @@ export default function Home({ data }) {
     <>
       <SEO />
       <Main />
-      <Catalog />
+      {/* <Catalog /> */}
       <AboutUs />
       <OurBenefits />
+      <Network />
     </>
   )
 }

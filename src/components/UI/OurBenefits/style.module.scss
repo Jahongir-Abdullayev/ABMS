@@ -1,40 +1,64 @@
 
-
+.ourBenefits{
+    padding: 80px 0px;
+}
 
 .title{
     font-size: 32px;
     font-family: 'Roboto-Bold';
-   
     width: 89%;
     margin: 30px auto 40px;
 }
-
 
 .benefits{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
+    // justify-content: center;
     margin-bottom: 50px;
+    margin-top: 40px;
     gap: 10px;
     .benefitCard{
-        background: #FFD583;
-        max-width: 250px;
-        padding: 20px;
-        text-align: center;
-        height: 200px;
-        .cardHeader{
+        background: #32618E0F;
+        max-width: 400px;
+        padding: 24px;
+        border-radius: 12px;
+        color: #18191F;
+        .number{
+            background-color: #32618E;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        .cardHeader{
+            
             margin-bottom: 10px;
             gap: 5px;
+          
             .cardTitle{
-                text-transform: uppercase;
+                // text-transform: uppercase;
                 font-family: 'Roboto-Bold';
-                font-size: 18px;
+                font-size: 24px;
+                line-height: 24px;
+                margin-bottom: 12px;
                 
             }
+        }
+        .text{
+            
+font-size: 16px;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0px;
+
+
         }
     }
 }

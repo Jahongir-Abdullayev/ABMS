@@ -8,7 +8,10 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import BurgerMenu from '../BurgerMenu'
 import cls from './style.module.scss'
-import logo from '../../../../public/images/black-logo1.png'
+import logo from '../../../../public/images/logo.png'
+import { RuFLag } from 'utils/icons'
+import RuFlag from '../../../../public/images/ruFlag.svg'
+import UZFlag from '../../../../public/images/uzFlag.svg'
 
 export function Header() {
   const router = useRouter()
@@ -21,11 +24,13 @@ export function Header() {
   const langs = [
     {
       key: 'ru',
-      label: 'ru'
+      label: 'Ru',
+      icon: RuFlag
     },
     {
       key: 'uz',
-      label: 'uz'
+      label: 'Uz',
+      icon: UZFlag
     },
     // {
     //   key: 'en',
@@ -58,14 +63,16 @@ export function Header() {
 
   const arrowDown = {
     cursor: "pointer",
-    width: "30px",
-    marginRight: "10px",
+    width: "20px",
+    color: '#00000099',
+    marginRight: '3px'
   };
   const arrowUp = {
     cursor: "pointer",
-    width: "30px",
-    marginRight: "10px",
+    width: "20px",
     transform: "rotate(180deg)",
+    color: '#00000099',
+    marginRight: '3px'
   };
 
   const handleLanguageChaneg = (e) => {
@@ -76,49 +83,46 @@ export function Header() {
 
   return (
     <div
-      style={{ background: "#F1EFEF" }}
+      style={{ background: "#FFFFFF" }}
       className={`${cls.main_container} ${
         router.route.substring(0, 6) === "/news/" && cls.news_active
       }`}
     >
       <Container className={cls.mobile_container}>
         <Box className={cls.header_menu}>
-          <div className={cls.logo}>
-            <Link href={"/"} passHref>
-              {/* <Image
+          <div className={cls.left_side}> 
+            <div className={cls.logo}>
+              {/* <RuFlag /> */}
+              <Link href={"/"} passHref>
+                {/* <Image
               style={{ cursor: "pointer" }}
               src={logo}
               width="70px"
               height="70px"
               alt="logo"
             /> */}
-              <div className={cls.logoName}>
-               <Image src={logo} alt='logo' width={100} height={50} />
-              </div>
-            </Link>
-          </div>
-          <div className={cls.headerMenu_items}>
-            <a onClick={() => router.push("/#home")}>
-              {" "}
-              <div className="hoverable_btn">{t("home")}</div>{" "}
-            </a>
-            <a onClick={() => router.push("#catalog")}>
-              <div className="hoverable_btn">{t("catalogs")}</div>
-            </a>
-            <a onClick={() => router.push("/#about")}>
-              {" "}
-              <div className="hoverable_btn">{t("about")}</div>{" "}
-            </a>
-            <a onClick={() => router.push("#contact")}>
-              {" "}
-              <div className="hoverable_btn">{t("contacts")}</div>{" "}
-            </a>
+                <div className={cls.logoName}>
+                  <Image src={logo} alt="logo" width={102} height={36} />
+                </div>
+              </Link>
+            </div>
+            <div className={cls.headerMenu_items}>
+              <a onClick={() => router.push("/#main")}>
+                <div className="hoverable_btn">{t("main")}</div>
+              </a>
+              <a onClick={() => router.push("#about")}>
+                <div className="hoverable_btn">{t("aboutUs")}</div>
+              </a>
+              <a onClick={() => router.push("/#partners")}>
+                <div className="hoverable_btn">{t("partners")}</div>
+              </a>
+              <a onClick={() => router.push("#contact")}>
+                <div className="hoverable_btn">{t("contacts")}</div>
+              </a>
+            </div>
           </div>
 
           <div className={cls.contact_lang_btns}>
-            <div className={cls.contact}>
-              <a href="tel:+998999999999">+998 71 205 00 35</a>
-            </div>
             <div className={cls.select_language}>
               <FormControl style={{ height: "100%" }}>
                 <Select
@@ -154,7 +158,22 @@ export function Header() {
                         locale={item.key}
                         passHref
                       >
-                        {item.key}
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "4px",
+                            fontSize: "15px",
+                          }}
+                        >
+                          <Image
+                            src={item?.icon}
+                            alt="logo"
+                            width={20}
+                            height={20}
+                          />
+                          {item.label}
+                        </div>
                       </Link>
                     </MenuItem>
                   ))}

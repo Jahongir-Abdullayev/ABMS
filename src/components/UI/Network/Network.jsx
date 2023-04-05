@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 
 
-export function About() {
+export function Network() {
   const { t } = useTranslation('common')
   const controls = useAnimation()
   const [ref, inView] = useInView()
@@ -29,7 +29,7 @@ export function About() {
       x: 0,
       transition: {
         duration: .3,
-        delay: 1,
+        delay: 0.8,
         staggerChildren: 0.4,
       },
     },
@@ -46,7 +46,7 @@ export function About() {
       x: 0,
       transition: {
         duration: .3,
-        delay: 1,
+        delay: 0.8,
         staggerChildren: 0.4,
       },
     }, 
@@ -62,7 +62,7 @@ export function About() {
           <div className={`${styles.aboutBlock}`}>
             
             <motion.div
-              variants={text}
+              variants={image}
               initial="hidden"
               animate={controls}
               transition={{
@@ -71,12 +71,12 @@ export function About() {
               }}
               className={` ${styles.text} `}
             >
-               <div className='header'>{t("whoIsABMS")}</div>
-               <div className={styles.contentText}>  {t("aboutUsText")}</div>
+               <div className='header'>{t("Company own chain store network")}</div>
+               <div className={styles.contentText}>  {t("netWorkText")}</div>
           
             </motion.div>
             <motion.div
-              variants={image}
+              variants={text}
               initial="hidden"
               animate={controls}
               transition={{

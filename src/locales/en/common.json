@@ -2,5 +2,10 @@
   "greeting": "Hello world",
   "home": "Home",
   "blog": "Blog",
-  "about": "About"
+  "about": "About",
+  "main": "main",
+  "aboutUs": "About us",
+  "partners": "Partners",
+  "contacts":"Contacts",
+  "whoIsABMS": "Who is ABMS?"
 }

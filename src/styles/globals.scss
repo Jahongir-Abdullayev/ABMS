@@ -33,7 +33,7 @@ header {
 
 .css-6hp17o-MuiList-root-MuiMenu-list{
   display: grid !important;
-  width: 66px;
+  // width: 66px;
 }
 
 
@@ -43,10 +43,20 @@ header {
  
 }
 
+.header{
+// font-family: Inter;
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+letter-spacing: 0.4099999964237213px;
+text-align: left;
+
+}
+
 .hoverable_btn:after {
   content: "";
   position: absolute;
-  background-color: #393737;
+  background-color: #000000A3;
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
   width: 0;
   height: 3px;
@@ -63,6 +73,8 @@ header {
 
 
 
-
+.MuiOutlinedInput-notchedOutline{
+  border-width: 0px !important;
+}
 
 

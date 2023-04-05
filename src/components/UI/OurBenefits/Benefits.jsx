@@ -1,5 +1,5 @@
 import { AccessTime, DoneOutline, ElectricBolt, Handshake } from "@mui/icons-material";
-import { Container } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import useTranslation from "next-translate/useTranslation";
 import { useEffect } from "react";
@@ -50,28 +50,23 @@ export function OurBenefits(){
     const data = [
       {
         id: 1,
-        title: "benefitTitle1",
-        icon:  <DoneOutline />,
+        title: "Punctuality",
+        // icon:  <DoneOutline />,
         text: "benefitText1",
       },
       {
         id: 2,
-        title: "benefitTitle2",
-        icon:  <ElectricBolt />,
+        title: "Responsibility",
+        // icon:  <ElectricBolt />,
         text: "benefitText2",
       },
       {
         id: 3,
-        title: "benefitTitle3",
-        icon: <Handshake />,
+        title: "Individuality",
+        // icon: <Handshake />,
         text: "benefitText3",
       },
-      {
-        id: 4,
-        title: "benefitTitle4",
-        icon: <AccessTime />,
-        text: "benefitText4",
-      },
+    
     ];
 
 
@@ -79,12 +74,14 @@ export function OurBenefits(){
       <div>
         <Container>
           <div className={styles.ourBenefits}>
-            <div className={styles.title}> {t("ourBenefits")} </div>
+            <div className="header"> {t("delearsKnowUsAs")} </div>
             <motion.div
               className={styles.benefits}
               ref={ref}
             >
+              <Grid container spacing={2}>
               {data?.map((item) => (
+                <Grid key={item.id} item xs={4}>
                 <motion.div
                   variants={itemVariant}
                   className={styles.benefitCard}
@@ -93,13 +90,15 @@ export function OurBenefits(){
                   initial="hidden"
                   ref={ref}
                 >
+                  <div className={styles.number}> {item.id} </div>
                   <div className={styles.cardHeader}>
                     <div className={styles.cardTitle}> {t(`${item.title}`)} </div>
-                    {item.icon}
                   </div>
-                  <div> {t(`${item.text}`)} </div>
+                  <div className={styles.text}> {t(`${item.text}`)} </div>
                 </motion.div>
+                </Grid>
               ))}
+              </Grid>
             </motion.div>
           </div>
         </Container>
