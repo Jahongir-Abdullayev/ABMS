@@ -5,6 +5,7 @@ import Link from 'next/link';
 import styles from './style.module.scss';
 import blackLogo from '../../../../public/images/black-logo1.png'
 import Image from 'next/image';
+import logo from '../../../../public/images/logo.png'
 
 
 export function Footer() {
@@ -17,7 +18,7 @@ export function Footer() {
             <Link href="/">
               <a className={styles.logo}>
                 <div className={styles.logoName}>
-                <Image src={blackLogo} alt="logo" width={100} height={50} />
+                <Image src={logo} alt="logo" width={102} height={36} />
                 </div>
               </a>
             </Link>
@@ -25,24 +26,25 @@ export function Footer() {
               <ul>
                 <li>
                   <Link href="/">
-                    <a>{t("home")}</a>
+                    <a>{t("Main")}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/#about">
-                    <a>{t("about")}</a>
+                    <a>{t("About us")}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="#catalog">
-                    <a>{t("catalogs")}</a>
+                    <a>{t("Partners")}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="#contact">
-                    <a>{t("contacts")}</a>
+                    <a>{t("Contacts")}</a>
                   </Link>
                 </li>
+                
               </ul>
             </nav>
           </div>
@@ -52,7 +54,7 @@ export function Footer() {
               
               <Phone />
             </div>
-            <div className={styles.title}>+998 71 205 00 35</div>
+            <div className={styles.title}>+998 12 345 67 89</div>
            
           </div>
           

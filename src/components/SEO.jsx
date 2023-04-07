@@ -9,7 +9,7 @@ export default function SEO({ title }) {
         content='width=device-width, initial-scale=1  maximum-scale=1, user-scalable=0'
       />
       <meta charSet='utf-8' />
-      <title>{title || 'Next js template'}</title>
+      <title>{title || 'ABMS'}</title>
       <meta name='description' content='Next js' />
       <meta
         name='keywords'
@@ -18,13 +18,13 @@ export default function SEO({ title }) {
       <meta property='og:type' content='website' />
       <meta
         property='og:title'
-        content={title || 'Next js template'}
+        content={title || 'ABMS'}
         key='ogtitle'
       />
       <meta property='og:description' content='Next js' key='ogdesc' />
       <meta
         property='og:site_name'
-        content={title || 'Next js template'}
+        content={title || 'ABMS'}
         key='ogsitename'
       />
       <meta
@@ -33,9 +33,9 @@ export default function SEO({ title }) {
         key='ogimage'
       />
       <meta name='twitter:card' content='summary' />
-      <meta name='twitter:title' content={title || 'Next js template'} />
+      <meta name='twitter:title' content={title || 'ABMS'} />
       <meta name='twitter:description' content='Next js' />
-      <meta name='twitter:site' content={title || 'Next js template'} />
+      <meta name='twitter:site' content={title || 'ABMS'} />
       <meta name='twitter:creator' content='Udevs' />
       {/* <meta
         name='twitter:image'

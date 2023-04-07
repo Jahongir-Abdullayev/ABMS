@@ -1,0 +1,114 @@
+.about {
+    min-height: 60vh;
+    width: 100%;
+    margin: 0 auto ;
+    padding-bottom: 80px;
+    
+    .aboutBlock{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      flex-direction: row-reverse;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.11);
+      
+      .text{
+        width: 48%;
+        padding: 0 24px 0px 0px;
+        .contentText{
+          line-height: 25px;
+          font-size: 20px;
+          font-weight: 400;
+          color: #18191F;
+          margin-top: 15px;
+          display: flex;
+          align-items: baseline;
+          gap: 8px;
+          font-weight: 400;
+          .dot{
+            width: 12px;
+            height: 12px;
+            background: #5D5FEF;
+            border-radius: 50%;
+          }
+        }
+      }
+      .image{
+        width: 48%;
+        // text-align: center;
+        span{
+          display: block !important;
+        }
+        img{
+          object-fit: cover;
+          border-top-left-radius: 12px;
+          border-bottom-left-radius: 12px;
+        }
+      }
+    }
+  }
+  
+  
+  @media(max-width: 800px){
+    .about{
+      .title{
+        text-align: center;
+      }
+      .aboutBlock{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        .text{
+          width: 100%;
+        }
+        .image{
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
+  .galleryBlock{
+    .firstSection{
+        display: flex;
+        gap: 24px;
+        .firstImage{
+            width: 69%;
+           
+            span{
+                height: 100% !important;
+            }
+        }
+    }
+    .secondSection{
+        display: flex;
+        gap: 24px;
+        margin-top: 24px;
+    }
+  }
+
+
+  .certificateBlock{
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 6px;
+    gap: 32px;
+    padding: 24px;
+    .block{
+        width: 50%;
+        // font-family: Inter;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        .text{
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 18px;
+            padding-right: 24px;
+        }
+    }
+  }

@@ -71,8 +71,8 @@ export function Network() {
               }}
               className={` ${styles.text} `}
             >
-               <div className='header'>{t("Company own chain store network")}</div>
-               <div className={styles.contentText}>  {t("netWorkText")}</div>
+               <div className='header'>{t("ownChainStore")}</div>
+               <div className={styles.contentText}>  {t("networkText")}</div>
           
             </motion.div>
             <motion.div

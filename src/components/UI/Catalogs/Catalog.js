@@ -4,7 +4,7 @@ import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { catalogs } from "../../../constants/catalogs";
+import { catalogs } from "../../../constants/partners";
 import ImageCatalog from './ImageCatalog';
 import styles from './style.module.scss';
 

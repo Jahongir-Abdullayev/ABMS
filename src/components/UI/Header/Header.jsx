@@ -1,17 +1,16 @@
 import { KeyboardArrowDown } from '@mui/icons-material'
-import WeekendIcon from '@mui/icons-material/Weekend'
-import { Box, Container, FormControl, MenuItem, Select } from '@mui/material'
+import { Box, Button, Container, FormControl, Menu, MenuItem, Select } from '@mui/material'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import BurgerMenu from '../BurgerMenu'
-import cls from './style.module.scss'
+import ENGFlag from '../../../../public/images/enFlag.svg'
 import logo from '../../../../public/images/logo.png'
-import { RuFLag } from 'utils/icons'
 import RuFlag from '../../../../public/images/ruFlag.svg'
 import UZFlag from '../../../../public/images/uzFlag.svg'
+import BurgerMenu from '../BurgerMenu'
+import cls from './style.module.scss'
 
 export function Header() {
   const router = useRouter()
@@ -32,10 +31,11 @@ export function Header() {
       label: 'Uz',
       icon: UZFlag
     },
-    // {
-    //   key: 'en',
-    //   label: 'en'
-    // }
+    {
+      key: 'en',
+      label: 'en',
+      icon: ENGFlag
+    }
   ]
 
   const burgerData = [
@@ -59,6 +59,11 @@ export function Header() {
       name: t("contacts"),
       href: "/contacts",
     },
+    {
+      id: 5,
+      name: t("brands"),
+      href: "/brands",
+    },
   ];
 
   const arrowDown = {
@@ -80,6 +85,14 @@ export function Header() {
     setLangOpen(false);
   };
 
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <div
@@ -90,7 +103,7 @@ export function Header() {
     >
       <Container className={cls.mobile_container}>
         <Box className={cls.header_menu}>
-          <div className={cls.left_side}> 
+          <div className={cls.left_side}>
             <div className={cls.logo}>
               {/* <RuFlag /> */}
               <Link href={"/"} passHref>
@@ -110,7 +123,7 @@ export function Header() {
               <a onClick={() => router.push("/#main")}>
                 <div className="hoverable_btn">{t("main")}</div>
               </a>
-              <a onClick={() => router.push("#about")}>
+              <a onClick={() => router.push("/about")}>
                 <div className="hoverable_btn">{t("aboutUs")}</div>
               </a>
               <a onClick={() => router.push("/#partners")}>
@@ -119,6 +132,57 @@ export function Header() {
               <a onClick={() => router.push("#contact")}>
                 <div className="hoverable_btn">{t("contacts")}</div>
               </a>
+              <div
+              >
+                <Button
+                  onClick={handleClick}
+                  id="basic-button"
+                  aria-controls={open ? "basic-menu" : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open ? "true" : undefined}
+                  className="hoverable_btn"
+                  style={{ color: "#000000A3" }}
+                >
+                  {t("brands")}
+                </Button>
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  MenuListProps={{
+                    "aria-labelledby": "basic-button",
+                  }}
+                >
+                  <MenuItem onClick={handleClose}>
+                    <a
+                      target="_blank"
+                      href="http://immer.uz/"
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
+                      Immer
+                    </a>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <a
+                      target="_blank"
+                      href="https://ziffler.uz/"
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
+                      Ziffler
+                    </a>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <a
+                      target="_blank"
+                      href="https://rulls.uz/"
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
+                      Rulls
+                    </a>
+                  </MenuItem>
+                </Menu>
+              </div>
             </div>
           </div>
 

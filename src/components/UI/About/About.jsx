@@ -54,13 +54,13 @@ export function About() {
 
 
   return (
-    <div id="about" style={{ background: "#D9D9D9", paddingTop: '80px' }}>
+    <div
+      id="about"
+      style={{ background: "#D9D9D9", paddingTop: "80px" }}
+    >
       <Container>
         <div className={styles.about}>
-         
-        
           <div className={`${styles.aboutBlock}`}>
-            
             <motion.div
               variants={text}
               initial="hidden"
@@ -71,9 +71,18 @@ export function About() {
               }}
               className={` ${styles.text} `}
             >
-               <div className='header'>{t("whoIsABMS")}</div>
-               <div className={styles.contentText}>  {t("aboutUsText")}</div>
-          
+              <div className="header" style={{marginBottom: '24px'}}>{t("WhoISABMS")}?</div>
+              <div className={styles.contentText}>
+                <div className={styles.desc}>
+                  {t("whoIsText1")}
+                </div>
+                <div>
+                {t("whoIsText2")}
+                </div>
+                <div style={{fontWeight: 600}}>
+                {t("whoIsText3")}
+                </div>
+              </div>
             </motion.div>
             <motion.div
               variants={image}
@@ -90,7 +99,6 @@ export function About() {
             </motion.div>
           </div>
         </div>
-       
       </Container>
     </div>
   );

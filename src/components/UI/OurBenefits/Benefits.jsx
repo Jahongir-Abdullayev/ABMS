@@ -50,19 +50,19 @@ export function OurBenefits(){
     const data = [
       {
         id: 1,
-        title: "Punctuality",
+        title: "punctuality",
         // icon:  <DoneOutline />,
         text: "benefitText1",
       },
       {
         id: 2,
-        title: "Responsibility",
+        title: "responsibility",
         // icon:  <ElectricBolt />,
         text: "benefitText2",
       },
       {
         id: 3,
-        title: "Individuality",
+        title: "individuality",
         // icon: <Handshake />,
         text: "benefitText3",
       },
@@ -74,7 +74,7 @@ export function OurBenefits(){
       <div>
         <Container>
           <div className={styles.ourBenefits}>
-            <div className="header"> {t("delearsKnowUsAs")} </div>
+            <div className="header"> {t("ourPrivileges")} </div>
             <motion.div
               className={styles.benefits}
               ref={ref}

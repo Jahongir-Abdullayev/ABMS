@@ -80,10 +80,61 @@
 
 
 
+.text{
+  position: absolute;
+  z-index: 100;
+  // top: 20%;
+  margin: 95px 96px;
+  color: white;
+  // left: 7%;
+  // display: flex;
+  .title{
+    font-family: 'Inter';
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0.4099999964237213px;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  .desc{
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 43px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    
+  }
+}
 
 
 
 
 
 
+.itemP {
+  height: 40rem;
+  span{
+    height: 100% !important;
+  }
+  img{
+  
+    object-fit: cover;
+  }
+}
+.itemP > img {
+  width: 100%;
+  object-fit: contain;
+  // height: 40rem;
+}
 
+.caption {
+  // background-color: rgba(0, 0, 0, 0.4);
+  // border-radius: 15px;
+}
+
+.caption h3 {
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+}

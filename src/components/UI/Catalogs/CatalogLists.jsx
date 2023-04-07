@@ -1,6 +1,6 @@
 import { ArrowBackIosNew, ArrowForwardIos, Preview } from "@mui/icons-material";
 import { Container, Modal } from "@mui/material"
-import { catalogs } from "constants/catalogs";
+import { catalogs } from "constants/partners";
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { useState } from "react";

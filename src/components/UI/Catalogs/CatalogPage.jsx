@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import { catalogs } from "constants/catalogs";
+import { catalogs } from "constants/partners";
 import { motion, useAnimation } from "framer-motion";
 import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";

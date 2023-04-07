@@ -78,3 +78,25 @@ text-align: left;
 }
 
 
+.carousel-control-prev, .carousel-control-next{
+  top: 85% !important;
+  left: 42% !important;
+  z-index: 1000 !important;
+  background: white !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  opacity: 1 !important;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  filter: invert(1) !important;
+  width: 20px !important;
+}
+
+.carousel-control-next{
+  left: 55% !important;
+}
+
+.carousel-indicators{
+  bottom:  7% !important;
+}
