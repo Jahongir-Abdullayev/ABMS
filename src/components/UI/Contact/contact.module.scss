@@ -1,0 +1,47 @@
+
+
+
+
+
+.background{
+    background-image: url('../../../../public/images/contactBack.png');
+    padding: 58px 0px;
+    .form{
+        background: white;
+        border-radius: 12px;
+        padding: 24px;
+        width: 420px;
+
+        .header {
+                font-family: Inter;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 48px;
+                margin-bottom: 20px;
+            }
+        .formSection{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .inputField, textarea{
+                border: 1px solid #E5E9EB;
+                border-radius: 12px;
+            }
+            textarea{
+                height: 90px;
+                padding: 10px;
+                font-family: Inter;
+                font-size: 16px;
+            }
+            .button{
+               
+                width: 100%;
+                button{
+                    background: #32618F;
+                    width: 100%;
+                    border-radius: 12px;
+                }
+            }
+        }
+    }
+}

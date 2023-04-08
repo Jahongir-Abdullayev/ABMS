@@ -100,3 +100,10 @@ text-align: left;
 .carousel-indicators{
   bottom:  7% !important;
 }
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #80868B;
+  opacity: 1; /* Firefox */
+  font-family: 400;
+}

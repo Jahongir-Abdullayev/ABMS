@@ -129,7 +129,7 @@ export function Header() {
               <a onClick={() => router.push("/#partners")}>
                 <div className="hoverable_btn">{t("partners")}</div>
               </a>
-              <a onClick={() => router.push("#contact")}>
+              <a onClick={() => router.push("/contact")}>
                 <div className="hoverable_btn">{t("contacts")}</div>
               </a>
               <div
